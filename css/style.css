@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+.background {
+  background-image: url("../assets/imgs/background.jpg");
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: contain;
+}
+
+.dot {
+  position: absolute;
+  background-image: url("../assets/imgs/dot-texture.png");
+  background-repeat: repeat;
+  width: 400px;
+  height: 100vh;
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 400px;
+  background-color: rgb(224, 220, 220);
+  background-size: contain;
+  right: 0;
+}
+
+.info {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  left: 20%;
+  top: 15%;
+}
+.info .logo img {
+  width: 50px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.title .pretitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #fff;
+}
+.title h1 {
+  position: relative;
+  top: -25px;
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.desc p {
+  padding: 20px 70px 0px 70px;
+  color: #fff;
+}
+
+@keyframes registerMoveLeft {
+  from {
+    left: 180px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes registerMoveRight {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: 180px;
+    opacity: 0;
+  }
+}
+#toggle-form:checked ~ .form .form-register {
+  display: block;
+  animation: registerMoveLeft 0.5s linear;
+  left: 0;
+  opacity: 1;
+}
+
+#toggle-form:checked ~ .form .form-login {
+  animation: registerMoveRight 0.5s linear;
+  left: 180px;
+  opacity: 0;
+}
+
+.btn-switch {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-switch .login, .btn-switch .register {
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  color: white;
+  line-height: 50px;
+}
+.btn-switch .login {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.btn-switch .register {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form {
+  width: 430px;
+  height: 600px;
+  position: relative;
+  float: right;
+  top: 15%;
+  right: 12%;
+}
+.form .title-form {
+  text-align: center;
+  padding: 50px 0px;
+  color: #3e3f5e;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.form .form-login::after, .form .form-register::after {
+  position: absolute;
+  content: "";
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: -75px;
+  left: -50px;
+  background-image: url("../assets/imgs/rocket.png");
+}
+.form .form-body {
+  padding: 0px 45px;
+}
+.form .form-body .field {
+  position: relative;
+}
+.form .form-body .field .sub-title {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 10px;
+  background-color: rgb(255, 255, 255);
+  transition: top 0.1s linear;
+  color: #adafca;
+  font-weight: 600;
+  padding: 0px 8px;
+}
+.form .form-body .field input {
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  border-radius: 10px;
+  border: 1px solid rgb(204, 201, 201);
+  font-size: 1.4rem;
+  padding-left: 10px;
+  transition: border-color 0.2s linears;
+}
+.form .form-body .field input:valid + .sub-title, .form .form-body .field input:focus + .sub-title {
+  top: -4px;
+  font-size: 0.8rem;
+}
+.form .form-body .field input[type=text]:focus, .form .form-body .field input[type=password]:focus {
+  border-color: 1px solid blue;
+  border: 1px solid blue;
+}
+.form .form-body .send {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0px;
+}
+.form .form-body .send input {
+  width: 20px;
+  height: 20px;
+}
+.form .form-body .send span {
+  padding-left: 10px;
+}
+.form .form-body .btn-login, .form .form-body .btn-register {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  color: white;
+  justify-content: center;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+.form .form-body .btn-login {
+  background-color: #615DFA;
+}
+.form .form-body .btn-register {
+  background-color: #23D2E2;
+}
+.form .form-body .btn-login:hover, .form .form-body .btn-register:hover {
+  cursor: pointer;
+}
+.form .form-body p {
+  margin-top: 20px;
+}
+.form .form-register {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  background-color: white;
+  border-radius: 15px;
+  left: 180px;
+  animation: registerMoveRight 0.5s linear;
+}
+.form .form-register p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.form .form-login {
+  position: absolute;
+  width: 100%;
+  height: 510px;
+  top: calc(50% - 255px);
+  left: 0;
+  opacity: 1;
+  background-color: white;
+  border-radius: 15px;
+  animation: registerMoveLeft 0.5s linear;
+}
+.form .form-login .send {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form .form-login .send .remember {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form .form-login .send .remember input {
+  width: 20px;
+  height: 20px;
+}
+.form .form-login .send .remember span {
+  padding-left: 10px;
+  color: #333;
+}
+.form .form-login .footer {
+  margin-top: 30px;
+}
+.form .form-login .footer span {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  color: #333;
+}
+.form .form-login .footer span::before, .form .form-login .footer span::after {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 2px;
+  background-color: rgb(195, 197, 197);
+  top: 50%;
+}
+.form .form-login .footer span::before {
+  left: 0;
+  margin-right: 5px;
+}
+.form .form-login .footer span::after {
+  right: 0;
+  margin-left: 5px;
+}
+.form .form-login .footer .lists-social {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  gap: 10px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+@keyframes footerMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+.form .form-login .footer .lists-social .social-item {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  flex-grow: 1;
+  color: #333;
+  position: relative;
+  top: 0;
+  transition: all 0.3s linear;
+}
+.form .form-login .footer .lists-social .social-item .fa-solid, .form .form-login .footer .lists-social .social-item .fa-brands {
+  color: #343533;
+  font-size: 1.8rem;
+}
+.form .form-login .footer .lists-social .social-item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .background {
+    height: initial;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .dot {
+    display: none;
+  }
+  .desc p {
+    display: none;
+  }
+  .info {
+    display: initial;
+    margin: 0 auto;
+    position: initial;
+  }
+  .form {
+    position: inherit;
+    margin: 0 auto;
+    float: none;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+  }
+  .form .form-login::after, .form .form-register::after {
+    display: none;
+  }
+  .form .form-register, .form .form-login {
+    left: 0;
+    top: 0;
+    animation: none;
+  }
+  #toggle-form:checked ~ .form .form-register {
+    display: block;
+    opacity: 1;
+    left: 0;
+    animation: none;
+  }
+  #toggle-form:checked ~ .form .form-login {
+    opacity: 0;
+    left: 0;
+    animation: none;
+  }
+}
+@media screen and (min-width: 1365px) {
+  .background {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .desc p {
+    display: block;
+  }
+  .form {
+    position: relative;
+    float: right;
+    top: 15%;
+    right: 12%;
+    left: inherit;
+  }
+  .form .form-login::after, .form .form-register::after {
+    display: block;
+  }
+  .form .form-register {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    background-color: white;
+    border-radius: 15px;
+    left: 180px;
+    animation: registerMoveRight 0.5s linear;
+  }
+  .form .form-register p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .form .form-login {
+    position: absolute;
+    width: 100%;
+    height: 510px;
+    top: calc(50% - 255px);
+    left: 0;
+    opacity: 1;
+    background-color: white;
+    border-radius: 15px;
+    animation: registerMoveLeft 0.5s linear;
+  }
+  .info {
+    position: absolute;
+  }
+  #toggle-form:checked ~ .form .form-register {
+    display: block;
+    animation: registerMoveLeft 0.5s linear;
+    left: 0;
+    opacity: 1;
+  }
+  #toggle-form:checked ~ .form .form-login {
+    animation: registerMoveRight 0.5s linear;
+    left: 180px;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

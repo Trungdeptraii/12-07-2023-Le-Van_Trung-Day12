@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/gid.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Bai1</title>
+  </head>
+  <body>
+    <main>
+      <div class="background">
+        <div class="dot"></div>
+        <div class="info">
+          <div class="logo">
+            <img src="./assets/imgs/viking-face-svgrepo-com.png" alt="" />
+          </div>
+          <div class="title">
+            <h2 class="pretitle">Wellcome to</h2>
+            <h1 class="title">VIKINGER</h1>
+          </div>
+          <div class="desc">
+            <p>
+              The next generation social network & community! Connect with your
+              friends and play with our quests and badges gamification system!
+            </p>
+          </div>
+          <div class="btn-switch">
+            <label class="login switch" for="toggle-form">Login</label>
+            <label class="register switch" for="toggle-form">Register</label>
+          </div>
+        </div>
+        <input type="checkbox" id="toggle-form" hidden />
+        <div class="form">
+          <div class="form-register">
+            <form action="#" class="login">
+              <h2 class="title-form">Create your Account</h2>
+              <div class="form-body">
+                <div class="field field-email">
+                  <label>
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      autofocus
+                      required
+                    />
+                    <span class="sub-title">Your Email</span>
+                  </label>
+                </div>
+                <div class="field field-username">
+                  <label>
+                    <input type="text" name="username" id="username" required />
+                    <span class="sub-title">Username</span>
+                  </label>
+                </div>
+                <div class="field field-password">
+                  <label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      required
+                    />
+                    <span class="sub-title">Password</span>
+                  </label>
+                </div>
+                <div class="field field-repeatPassword">
+                  <label>
+                    <input
+                      type="password"
+                      name="repeatPassword"
+                      id="repeatPassword"
+                      required
+                    />
+                    <span class="sub-title">Repeat Password</span>
+                  </label>
+                </div>
+                <div class="send">
+                  <label class="send">
+                    <input type="checkbox" />
+                    <span>Send me news and updates via email</span>
+                  </label>
+                </div>
+                <button class="btn-register" type="submit">Register Now</button>
+                <p>
+                  You'll receive a confirmation email in your inbox with a link
+                  to activate your account. If you have any problems,
+                  <a href="#">Contact us !</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="form-login">
+            <form action="#">
+              <h2 class="title-form">Account Login</h2>
+              <div class="form-body">
+                <div class="field field-usernameORemail">
+                  <label>
+                    <input
+                      type="text"
+                      name="usernameORemail"
+                      id="usernameORemail"
+                      autofocus
+                      required
+                    />
+                    <span class="sub-title">Username or Email</span>
+                  </label>
+                </div>
+                <div class="field field-password">
+                  <label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      required
+                    />
+                    <span class="sub-title">Password</span>
+                  </label>
+                </div>
+                <div class="send">
+                  <label class="remember">
+                    <input type="checkbox" />
+                    <span>Remember me</span>
+                  </label>
+                  <span>Forgot Password?</span>
+                </div>
+                <button class="btn-login" type="submit">
+                  Login to your Account!
+                </button>
+                <div class="footer">
+                  <span>Login width your Social Account</span>
+                  <ul class="lists-social">
+                    <li class="social-item">
+                      <i class="fa-brands fa-square-facebook"></i>
+                    </li>
+                    <li class="social-item">
+                      <i class="fa-brands fa-google"></i>
+                    </li>
+                    <li class="social-item">
+                      <i class="fa-solid fa-message"></i>
+                    </li>
+                    <li class="social-item">
+                      <i class="fa-brands fa-youtube"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
