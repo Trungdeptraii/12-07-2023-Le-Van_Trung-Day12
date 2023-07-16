@@ -435,3 +435,8 @@ html{
         opacity: 0;
     }
 }
+@media screen and (min-width: 1500px) {
+    .dot{
+        display: block;
+    }
+}
